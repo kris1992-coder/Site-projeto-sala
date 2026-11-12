@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Recebidos - TechUniDiasUp</title>
+</head>
+<body>
+    <header>
+        <h1>Guia de Sobrevivência dos Calouros - 1º Período</h1>
+        <p>Confirmação de Envio de Dados</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="cadastro.html">Cadastro de Veterano / Apoio</a></li>
+            <li><a href="dados_recebidos.html">Confirmação de Dados</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Cadastro recebido!</h2>
+            <p>Obrigado por se cadastrar. Seus dados foram processados com sucesso pelo sistema da TechUniDiasUp.</p>
+            
+            <section id="resumo_dados">
+                <h3>Resumo das informações enviadas:</h3>
+                <div id="conteudo_parametros">
+                    <p>Carregando informações do formulário...</p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 TechUniDiasUp - Projeto de Boas-Vindas aos Calouros.</p>
+    </footer>
+
+    <script>
+        urlParams = new URLSearchParams(window.location.search);
+         container = document.getElementById('conteudo_parametros');
+
+        if (urlParams.toString()) {
+            lethtmlSaida = '<ul>';
+            urlParams.forEach((value, key) => {
+                htmlSaida += `<li><strong>${key}:</strong> ${decodeURIComponent(value)}</li>`;
+            });
+            htmlSaida += '</ul>';
+            container.innerHTML = htmlSaida;
+        } else {
+            container.innerHTML = '<p>Nenhum dado enviado via formulário até o momento.</p>';
+        }
+    </script>
+</body>
+</html>

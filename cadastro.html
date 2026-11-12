@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro - Guia de Sobrevivência</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Guia de Sobrevivência para Calouros</h1>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="dados_recebidos.html">Dados Recebidos</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Cadastro do Calouro</h2>
+
+        <form action="dados_recebidos.html" method="get">
+
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+            </p>
+
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email">
+            </p>
+
+            <p>
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade">
+            </p>
+
+            <fieldset>
+                <legend>Turno:</legend>
+
+                <input type="radio" id="manha" name="turno" value="manha">
+                <label for="manha">Manhã</label>
+
+                <input type="radio" id="noite" name="turno" value="noite">
+                <label for="noite">Noite</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Assuntos que deseja aprender:</legend>
+
+                <input type="checkbox" id="html" name="interesses" value="html">
+                <label for="html">HTML</label>
+
+                <input type="checkbox" id="python" name="interesses" value="python">
+                <label for="python">Python</label>
+
+                <input type="checkbox" id="redes" name="interesses" value="redes">
+                <label for="redes">Redes de Computadores</label>
+            </fieldset>
+
+            <p>
+                <label for="disciplina">Disciplina:</label>
+
+                <select id="disciplina" name="disciplina">
+                    <option value="">Selecione</option>
+                    <option value="programacao">Introdução à Programação</option>
+                    <option value="frontend">Tecnologia para Front-end</option>
+                    <option value="redes">Redes de Computadores</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="mensagem">Conte sua maior dificuldade:</label>
+                <textarea id="mensagem" name="mensagem"></textarea>
+            </p>
+
+            <button type="submit">Enviar cadastro</button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Projeto UniDiasUp - Sistemas para Internet</p>
+    </footer>
+
+</body>
+</html>
